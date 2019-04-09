@@ -1,0 +1,118 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.label {
+  margin-bottom: 5px;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.card-container {
+  width: 320px;
+  padding: 10px;
+  margin: 5px;
+  margin-right: 45px;
+  background-color: #f3f3f3;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+}
+
+.card {
+  margin: 5px;
+  /* border: 1px solid #ccc; */
+  background-color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
+  padding: 10px;
+}
+
+.column-drag-handle {
+  cursor: move;
+  padding: 5px;
+}
+
+.card-ghost {
+  transition: transform 0.18s ease;
+  transform: rotateZ(5deg);
+}
+
+.card-ghost-drop {
+  transition: transform 0.18s ease-in-out;
+  transform: rotateZ(0deg);
+}
+
+.opacity-ghost {
+  transition: all 0.18s ease;
+  opacity: 0.8;
+  cursor: ns-resize;
+  /* transform: rotateZ(5deg); */
+  background-color: cornflowerblue;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.3);
+  cursor: ns-resize;
+}
+
+.opacity-ghost-drop {
+  opacity: 1;
+  /* transform: rotateZ(0deg); */
+  background-color: white;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0);
+}
+
+.drop-zone {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.drop-zone-container {
+  transition: background-color 0.2s ease;
+  width: 100px;
+  height: 100px;
+  border: 5px solid #348;
+  background-color: #80bdff;
+  border-radius: 100px;
+}
+
+.drop-zone-container.hover {
+  background-color: yellow;
+  transform: scale(1.02);
+}
+
+.drop-zone-draggable {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #348;
+  background-color: cornflowerblue;
+  border-radius: 100px;
+  margin: 10px;
+}
+
+.board {
+  width: 800px;
+  height: 800px;
+  border: 1px solid #000;
+}
+
+.row {
+  display: flex;
+}
+
+.drop-preview {
+  background-color: rgba(150, 150, 200, 0.1);
+  border: 1px dashed #abc;
+  margin: 5px;
+}
+
+.cards-drop-preview {
+  background-color: rgba(150, 150, 200, 0.1);
+  border: 1px dashed #abc;
+  margin: 5px 45px 5px 5px;
+}
